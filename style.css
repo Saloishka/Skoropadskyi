@@ -1,0 +1,71 @@
+div.head {
+    max-width: 1480px;
+    background-color: #fef7d2;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+div.head img {
+    width: 50%;
+    height: auto;
+    margin-left: 375px;
+}
+
+div.head img {
+    text-align: center;
+}
+div.title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    margin: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav {
+    text-align: center;
+}
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 15px;
+    color: black;
+    font-variant: petite-caps;
+    font-style: italic;
+}
+
+nav a:hover {
+    color: rgb(153, 147, 79);
+}
+
+div.life {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    border: 1px solid black;
+    gap: 30px;
+
+    background-image: url("https://img.freepik.com/free-photo/pastel-yellow-vignette-concrete-textured-background_53876-124561.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+div.text {
+    margin-left: 60px;
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+}
+
+div.photo {
+    width: 50%;
+    margin-right: 20px;
+    padding: 20px
+}
+div.photo img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 17px;
+}
