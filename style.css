@@ -12,9 +12,6 @@ div.head img {
     margin-left: 375px;
 }
 
-div.head img {
-    text-align: center;
-}
 
 
 div.title {
@@ -28,6 +25,7 @@ div.title {
 nav {
     text-align: center;
 }
+
 nav a {
     text-decoration: none;
     font-size: 18px;
@@ -46,7 +44,7 @@ nav a:hover {
 body {
     color: #262626;
     background-color: #ffffff !important;
-}
+}   
 
 div.life {
     display: flex;
@@ -156,4 +154,12 @@ table a:hover{
 
 table tbody tr{
 text-align: center;
+}
+
+ i + i {
+    color: red;
+}
+
+b > i {
+    color: green;
 }
