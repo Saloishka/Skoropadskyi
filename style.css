@@ -21,6 +21,7 @@ div.title {
     font-weight: bold;
     margin: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    position: static;
 }
 
 nav {
@@ -187,8 +188,8 @@ div.links a.links1:visited {
  }
 
  div.list2 dd:before {
-content: "\27A4";
-margin-right: 5px;
+    content: "\27A4";
+    margin-right: 5px;
  }
 
  
