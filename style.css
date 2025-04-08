@@ -4,6 +4,7 @@ div.head {
     background-color: #fef7d2;
     padding: 10px;
     border: 1px solid black;
+    float: top;
 }
 
 div.head img {
@@ -98,12 +99,12 @@ div.list a :hover{
     color: rgb(153, 147, 79);
 }
 
-div.list dd{
+div.list2 dd{
     font-size: 18px;
     font-family: 'Courier New', Courier, monospace;
 } 
 
-div.list dt{
+div.list2 dt{
     font-weight: bold;
     margin: 7px;
     text-align: center;
@@ -163,3 +164,38 @@ text-align: center;
 b > i {
     color: green;
 }
+
+span.bold  {
+    font-weight: bold;
+}
+div.links a{
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+div.links a.links1:visited {
+    color: red;
+ }
+ 
+ div.links a.links2:link {
+     color: green;
+ }
+ 
+ div.links a.links3:active {
+     color: #e99a66;
+ }
+
+ div.list2 dd:before {
+content: "\27A4";
+margin-right: 5px;
+ }
+
+ 
+ div.list2 dt:after {
+    content: "\2757";
+ }
+
+ div.list2 dl dt:first-child {
+    color: rgb(95, 0, 44);
+  }
