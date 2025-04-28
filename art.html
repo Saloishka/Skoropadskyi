@@ -21,5 +21,50 @@
          </nav>
      </div>  
 </header>
+
+<div class="title">
+    <p>Короткі відео</p>
+    </div>
+</div>
+
+<div class="video-block">
+    <div class="video-wrapper">
+      <video src="video/BestHetman.mp4" controls></video>
+      <video src="video/Chilledit.mp4" controls></video>
+      <video src="video/Cutedit.mp4" controls></video>
+      <video src="video/Dark edit.mp4" controls></video>
+      <video src="video/Deepdarkedit.mp4" controls></video>
+      <video src="video/heavyedit.mp4" controls></video>
+      <video src="video/HetmanOfAllUkraine.mp4" controls></video>
+      <video src="video/kapitalism.mp4" controls></video>
+      <video src="video/slide.mp4" controls></video>
+      <video src="video/Slide_dark.mp4" controls></video>
+      <video src="video/ВільнеКозацтво.mp4" controls></video>
+      <video src="video/Сила.MP4" controls></video>
+      <video src="video/тян.mp4" controls></video>
+      <video src="video/Справжній гетьман.mp4" controls></video>
+      <video src="video/УНР.mp4" controls></video>
+      <video src="video/samurai.mp4" controls></video>
+      </div>
+</div>
+
+  <script>
+    const videos = document.querySelectorAll('video');
+    
+    videos.forEach(video => {
+      video.addEventListener('click', () => {
+        videos.forEach(v => {
+          if (v !== video) {
+            v.pause();
+          }
+        });
+        video.play();
+      });
+    });
+  </script>
+
+
+
+
 </body>
 </html>
