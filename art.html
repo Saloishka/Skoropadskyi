@@ -60,25 +60,28 @@
 </div>
 
 <script>
-     const img = document.getElementById("skorodog");
+const img = document.getElementById("skorodog");
 
-  img.addEventListener("mousedown", startDrag);
+  img.ondragstart = () => false;
 
-  function startDrag(e) {
+  img.addEventListener("mousedown", function (e) {
+    e.preventDefault(); 
+
     const shiftX = e.clientX - img.offsetLeft;
     const shiftY = e.clientY - img.offsetTop;
 
-    function onMove(e) {
-      img.style.left = (e.clientX - shiftX) + 'px';
-      img.style.top = (e.clientY - shiftY) + 'px';
+    function moveAt(e) {
+      img.style.left = e.clientX - shiftX + "px";
+      img.style.top = e.clientY - shiftY + "px";
     }
 
-    document.addEventListener("mousemove", onMove);
+    document.addEventListener("mousemove", moveAt);
 
-    document.addEventListener("mouseup", () => {
-      document.removeEventListener("mousemove", onMove);
-    }, { once: true });
-  }
+    document.addEventListener("mouseup", function stop() {
+      document.removeEventListener("mousemove", moveAt);
+      document.removeEventListener("mouseup", stop);
+    });
+  });
 </script>
 </body>
 </html>
