@@ -263,3 +263,15 @@ div.links a.links1:visited {
 #sideMenu button:hover {
   background-color: rgb(222, 214, 128);
 }
+
+.print {
+font-family:"lucida console"; 
+}
+
+ #skorodog {
+      position: fixed;
+      width: 130px;
+      height: 130px;
+      cursor: grab;
+      user-select: none;
+    }

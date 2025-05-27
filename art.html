@@ -31,6 +31,8 @@
   <button data-action="wiki">🌐</button>
 </aside>   
 
+<img id="skorodog" src="images/skorodog.jpg" alt="пес">
+
 <div class="title">
     <p>Короткі відео</p>
     </div>
@@ -56,5 +58,27 @@
       <video src="video/samurai.mp4" controls></video>
       </div>
 </div>
+
+<script>
+     const img = document.getElementById("skorodog");
+
+  img.addEventListener("mousedown", startDrag);
+
+  function startDrag(e) {
+    const shiftX = e.clientX - img.offsetLeft;
+    const shiftY = e.clientY - img.offsetTop;
+
+    function onMove(e) {
+      img.style.left = (e.clientX - shiftX) + 'px';
+      img.style.top = (e.clientY - shiftY) + 'px';
+    }
+
+    document.addEventListener("mousemove", onMove);
+
+    document.addEventListener("mouseup", () => {
+      document.removeEventListener("mousemove", onMove);
+    }, { once: true });
+  }
+</script>
 </body>
 </html>
