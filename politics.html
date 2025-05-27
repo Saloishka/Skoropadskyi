@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Політична діяльність</title>
     <link rel="stylesheet" href="style.css">
-     <script src="selectorP.js" defer></script>
+     <!-- <script src="selectorP.js" defer></script> -->
+    <script src="sideMenu.js" defer></script>
 </head>
 <body>
 <header>
@@ -22,6 +23,14 @@
          </nav>
      </div>  
 </header>
+
+<aside id="sideMenu">
+  <button data-action="home">🏠</button>
+  <button data-action="map">🗺️</button>
+  <button data-action="politics">⚖️</button>
+  <button data-action="art">🎨</button>
+  <button data-action="wiki">🌐</button>
+</aside>   
 
 <div class="title">
     <p>Прихід до влади</p>
@@ -93,8 +102,8 @@
                             </li>
                           </ul>
                     </div>
-                    <div class="list2">
-                    <dl>
+                    <div class="list2">     
+                    <dl id="List2">
                         <dt>УНР</dt>
                         <dd><i>20 листопада 1917</i> - <i>10 листопада 1920 року</i></dd>
                         <dt>Українська Держава</dt>
@@ -102,7 +111,7 @@
                         <dt><b><i>Директорія</i></b></dt>
                         <dd><i>14 листопада 1918 - 10 листопада 1920</i></dd>
                     </dl>
-                </div>
+                    </div>
 
 
         
@@ -200,7 +209,21 @@
     </div>
 
 <script>
-document.write("додано текст через document.write");
+//document.write("додано текст через document.write");
+
+  const list = document.getElementById('List2');
+
+  list.onclick = function(event) {
+    const highlighted = list.querySelector('.highlight');
+    if (highlighted) {
+      highlighted.classList.remove('highlight');
+    }
+
+    if (event.target.tagName === 'DT' || event.target.tagName === 'DD') {
+      event.target.classList.add('highlight');
+    }
+  };
+
 </script>
 
 </body>

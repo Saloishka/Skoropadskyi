@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мапа Української Держави</title>
     <link rel="stylesheet" href="style.css">
-    <script src="location.js" defer></script>
+    <script src="sideMenu.js" defer></script>
 </head>
 <body>
 <header>
@@ -23,7 +23,75 @@
      </div>  
 </header>
 
+<aside id="sideMenu">
+  <button data-action="home">🏠</button>
+  <button data-action="map">🗺️</button>
+  <button data-action="politics">⚖️</button>
+  <button data-action="art">🎨</button>
+  <button data-action="wiki">🌐</button>
+</aside>   
+
 
 <iframe name = "map"  type="image" width = "500px" height = "500px"  src="https://atlas.ostellus.com/?lat=50.545578602008604&lon=33.83789062500001&zoom=5&date=1918-11-13&rf=1908-11-12&rt=1928-11-12&id=34604627" style="  margin-left: 500px; margin-top:40px;"></iframe><br> 
+<button style="margin-left: 39%" onclick="window.location.href='https://atlas.ostellus.com/'">Відкрити сайт мапи</button>
+<button id="btn1">Адміністративний розподіл</button>
+
+<script>
+  const btn = document.getElementById("btn1");
+  btn.onclick = function() {
+    window.open('https://commons.wikimedia.org/wiki/File:Ukrainian_State_1918_divisions.png', '_blank');
+    event.currentTarget.style.backgroundColor = 'lightblue';
+  }
+
+
+
+
+
+   const addImage = {
+    handleEvent(event) {
+    const img = document.createElement('img');
+    img.className = 'image';
+    img.src = 'images/герб2.png';
+    img.style.left = `${event.clientX - 30}px`;
+    img.style.top = `${event.clientY - 33}px`;
+    document.body.appendChild(img);
+    setTimeout(() => img.remove(), 1000);
+    } 
+   };
+
+  function addGlow(event) {
+    const glow = document.createElement('div');
+    glow.className = 'glow';
+    glow.style.left = `${event.clientX - 40}px`;
+    glow.style.top = `${event.clientY - 40}px`;
+    document.body.appendChild(glow);
+    setTimeout(() => glow.remove(), 1000);
+  }
+
+  document.addEventListener('click', addImage);
+  document.addEventListener('click', addGlow);
+ 
+  setTimeout(() => {
+    document.removeEventListener('click', addImage);
+    document.removeEventListener('click', addGlow);
+  }, 10000);
+
+</script>
+
+<style>
+.image {
+    position: absolute;
+    width: 60px;
+    height: 73px;
+    }
+
+    .glow {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background-color: rgba(239, 255, 14, 0.4);
+      filter: blur(30px);
+    }
+</style>
 </body>
 </html>
